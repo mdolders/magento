@@ -28,10 +28,10 @@
 <config>
     <global>
         <install>
-            <date><![CDATA[Mon, 09 Jan 2017 10:43:02 +0000]]></date>
+            <date><![CDATA[Mon, 09 Jan 2017 15:39:46 +0000]]></date>
         </install>
         <crypt>
-            <key><![CDATA[97840900918855db70081edda26c4ea4]]></key>
+            <key><![CDATA[d0c550aebe1840886f2dab25ba8966f0]]></key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
@@ -42,7 +42,7 @@
                 <connection>
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[root]]></username>
-                    <password><![CDATA[password]]></password>
+                    <password><![CDATA[]]></password>
                     <dbname><![CDATA[martiyt182_mg]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
