@@ -70,4 +70,8 @@ downloader/.cache
 
 #Other
 magicento.phpstorm.meta.php
+<<<<<<< Updated upstream
 .tmp_*
+=======
+.tmp_*
+>>>>>>> Stashed changes

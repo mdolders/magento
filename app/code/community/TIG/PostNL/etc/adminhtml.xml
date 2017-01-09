@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *                  ___________       __            __
+ *                  \__    ___/____ _/  |_ _____   |  |
+ *                    |    |  /  _ \\   __\\__  \  |  |
+ *                    |    | |  |_| ||  |   / __ \_|  |__
+ *                    |____|  \____/ |__|  (____  /|____/
+ *                                              \/
+ *          ___          __                                   __
+ *         |   |  ____ _/  |_   ____ _______   ____    ____ _/  |_
+ *         |   | /    \\   __\_/ __ \\_  __ \ /    \ _/ __ \\   __\
+ *         |   ||   |  \|  |  \  ___/ |  | \/|   |  \\  ___/ |  |
+ *         |___||___|  /|__|   \_____>|__|   |___|  / \_____>|__|
+ *                  \/                           \/
+ *                  ________
+ *                 /  _____/_______   ____   __ __ ______
+ *                /   \  ___\_  __ \ /  _ \ |  |  \\____ \
+ *                \    \_\  \|  | \/|  |_| ||  |  /|  |_| |
+ *                 \______  /|__|    \____/ |____/ |   __/
+ *                        \/                       |__|
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Creative Commons License.
+ * It is available through the world-wide-web at this URL:
+ * http://creativecommons.org/licenses/by-nc-nd/3.0/nl/deed.en_US
+ * If you are unable to obtain it through the world-wide-web, please send an email
+ * to servicedesk@tig.nl so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this module to newer
+ * versions in the future. If you wish to customize this module for your
+ * needs please contact servicedesk@tig.nl for more information.
+ *
+ * @copyright   Copyright (c) 2016 Total Internet Group B.V. (http://www.tig.nl)
+ * @license     http://creativecommons.org/licenses/by-nc-nd/3.0/nl/deed.en_US
+ */
+-->
+<config>
+    <menu>
+        <sales>
+            <children>
+                <postnl_returns translate="title" module="postnl">
+                    <title>PostNL Returns</title>
+                    <action>adminhtml/postnlAdminhtml_returns</action>
+                    <sort_order>35</sort_order>
+                    <depends>
+                        <config>postnl/returns/return_labels_active</config>
+                    </depends>
+                </postnl_returns>
+            </children>
+        </sales>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <postnl translate="title" module="postnl">
+                                        <title>PostNL</title>
+                                        <sort_order>330</sort_order>
+                                        <children>
+                                            <download_logs translate="title" module="postnl">
+                                                <title>Download PostNL log files</title>
+                                                <sort_order>10</sort_order>
+                                            </download_logs>
+                                        </children>
+                                    </postnl>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <postnl translate="title" module="postnl">
+                        <title>PostNL</title>
+                        <children>
+                            <shipment translate="title" module="postnl">
+                                <title>Shipment</title>
+                                <children>
+                                    <complete_status translate="title" module="postnl">
+                                        <title>Complete Status History</title>
+                                        <sort_order>10</sort_order>
+                                    </complete_status>
+                                    <actions translate="title" module="postnl">
+                                        <title>Actions</title>
+                                        <sort_order>20</sort_order>
+                                        <children>
+                                            <confirm translate="title" module="postnl">
+                                                <title>Confirm</title>
+                                                <sort_order>10</sort_order>
+                                            </confirm>
+                                            <print_label translate="title" module="postnl">
+                                                <title>Print Shipping Label</title>
+                                                <sort_order>20</sort_order>
+                                                <children>
+                                                    <print_packing_slips translate="title" module="postnl">
+                                                        <title>Print Packing Slip</title>
+                                                        <sort_order>10</sort_order>
+                                                    </print_packing_slips>
+                                                    <print_return_labels translate="title" module="postnl">
+                                                        <title>Print Return Label</title>
+                                                        <sort_order>20</sort_order>
+                                                        <children>
+                                                            <send_return_label_email translate="title" module="postnl">
+                                                                <title>Send Return Label Email</title>
+                                                                <sort_order>10</sort_order>
+                                                            </send_return_label_email>
+                                                        </children>
+                                                    </print_return_labels>
+                                                </children>
+                                            </print_label>
+                                            <create_parcelware_export translate="title" module="postnl">
+                                                <title>Create Parcelware Export</title>
+                                                <sort_order>40</sort_order>
+                                            </create_parcelware_export>
+                                            <send_track_and_trace translate="title" module="postnl">
+                                                <title>Send Track &amp; Trace Email</title>
+                                                <sort_order>50</sort_order>
+                                            </send_track_and_trace>
+                                            <reset_confirmation translate="title" module="postnl">
+                                                <title>Change Confirmation</title>
+                                                <sort_order>60</sort_order>
+                                            </reset_confirmation>
+                                            <delete_labels translate="title" module="postnl">
+                                                <title>Delete Shipping Labels</title>
+                                                <sort_order>70</sort_order>
+                                            </delete_labels>
+                                            <convert translate="title" module="postnl">
+                                                <title>Convert</title>
+                                                <sort_order>80</sort_order>
+                                                <children>
+                                                    <to_buspakje translate="title" module="postnl">
+                                                        <title>To Letter Box Parcel</title>
+                                                        <sort_order>10</sort_order>
+                                                    </to_buspakje>
+                                                    <to_package translate="title" module="postnl">
+                                                        <title>To Package</title>
+                                                        <sort_order>20</sort_order>
+                                                    </to_package>
+                                                    <change_product_code translate="title" module="postnl">
+                                                        <title>Change Product Option</title>
+                                                        <sort_order>30</sort_order>
+                                                    </change_product_code>
+                                                    <change_parcel_count translate="title" module="postnl">
+                                                        <title>Change Colli Count</title>
+                                                        <sort_order>40</sort_order>
+                                                    </change_parcel_count>
+                                                </children>
+                                            </convert>
+                                        </children>
+                                    </actions>
+                                </children>
+                            </shipment>
+                        </children>
+                    </postnl>
+                    <sales>
+                        <children>
+                            <postnl_returns  translate="title" module="postnl">
+                                <title>PostNL Returns</title>
+                                <sort_order>35</sort_order>
+                            </postnl_returns>
+                        </children>
+                    </sales>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

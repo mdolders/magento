@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+**
+ *                  ___________       __            __
+ *                  \__    ___/____ _/  |_ _____   |  |
+ *                    |    |  /  _ \\   __\\__  \  |  |
+ *                    |    | |  |_| ||  |   / __ \_|  |__
+ *                    |____|  \____/ |__|  (____  /|____/
+ *                                              \/
+ *          ___          __                                   __
+ *         |   |  ____ _/  |_   ____ _______   ____    ____ _/  |_
+ *         |   | /    \\   __\_/ __ \\_  __ \ /    \ _/ __ \\   __\
+ *         |   ||   |  \|  |  \  ___/ |  | \/|   |  \\  ___/ |  |
+ *         |___||___|  /|__|   \_____>|__|   |___|  / \_____>|__|
+ *                  \/                           \/
+ *                  ________
+ *                 /  _____/_______   ____   __ __ ______
+ *                /   \  ___\_  __ \ /  _ \ |  |  \\____ \
+ *                \    \_\  \|  | \/|  |_| ||  |  /|  |_| |
+ *                 \______  /|__|    \____/ |____/ |   __/
+ *                        \/                       |__|
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Creative Commons License.
+ * It is available through the world-wide-web at this URL:
+ * http://creativecommons.org/licenses/by-nc-nd/3.0/nl/deed.en_US
+ * If you are unable to obtain it through the world-wide-web, please send an email
+ * to servicedesk@tig.nl so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this module to newer
+ * versions in the future. If you wish to customize this module for your
+ * needs please contact servicedesk@tig.nl for more information.
+ *
+ * @copyright   Copyright (c) 2016 Total Internet Group B.V. (http://www.tig.nl)
+ * @license     http://creativecommons.org/licenses/by-nc-nd/3.0/nl/deed.en_US
+ */
+-->
+<logging>
+    <postnl_shipment translate="label" module="postnl">
+        <label>PostNL</label>
+        <actions>
+            <adminhtml_postnlAdminhtml_shipment_printLabel translate="action" module="postnl">
+                <action>Print label</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+            </adminhtml_postnlAdminhtml_shipment_printLabel>
+
+            <adminhtml_postnlAdminhtml_shipment_printReturnLabel translate="action" module="postnl">
+                <action>Print return label</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+            </adminhtml_postnlAdminhtml_shipment_printReturnLabel>
+
+            <adminhtml_postnlAdminhtml_shipment_printPackingSlip translate="action" module="postnl">
+                <action>Print packing slip</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+            </adminhtml_postnlAdminhtml_shipment_printPackingSlip>
+
+            <adminhtml_postnlAdminhtml_shipment_confirm translate="action" module="postnl">
+                <action>Confirm shipment</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+                <skip_on_back>
+                    <adminhtml_sales_shipment_view/>
+                </skip_on_back>
+            </adminhtml_postnlAdminhtml_shipment_confirm>
+
+            <adminhtml_postnlAdminhtml_statusHistory translate="action" module="postnl">
+                <action>View status history</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+            </adminhtml_postnlAdminhtml_statusHistory>
+
+            <adminhtml_postnlAdminhtml_shipment_sendTrackAndTrace translate="action" module="postnl">
+                <action>Send track &amp; trace email</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+                <skip_on_back>
+                    <adminhtml_sales_shipment_view/>
+                </skip_on_back>
+            </adminhtml_postnlAdminhtml_shipment_sendTrackAndTrace>
+
+            <adminhtml_postnlAdminhtml_shipment_sendReturnLabelEmail translate="action" module="postnl">
+                <action>Send return label email</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+                <skip_on_back>
+                    <adminhtml_sales_shipment_view/>
+                </skip_on_back>
+            </adminhtml_postnlAdminhtml_shipment_sendReturnLabelEmail>
+
+            <adminhtml_postnlAdminhtml_shipment_resetConfirmation translate="action" module="postnl">
+                <action>Change confirmation</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+            </adminhtml_postnlAdminhtml_shipment_resetConfirmation>
+
+            <adminhtml_postnlAdminhtml_shipment_removeLabels translate="action" module="postnl">
+                <action>Delete labels</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+                <skip_on_back>
+                    <adminhtml_sales_shipment_view/>
+                </skip_on_back>
+            </adminhtml_postnlAdminhtml_shipment_removeLabels>
+
+            <adminhtml_postnlAdminhtml_shipment_convertToBuspakje translate="action" module="postnl">
+                <action>Convert to letter box</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+                <skip_on_back>
+                    <adminhtml_sales_shipment_view/>
+                </skip_on_back>
+            </adminhtml_postnlAdminhtml_shipment_convertToBuspakje>
+
+            <adminhtml_postnlAdminhtml_shipment_convertToPackage translate="action" module="postnl">
+                <action>Convert to package</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+                <skip_on_back>
+                    <adminhtml_sales_shipment_view/>
+                </skip_on_back>
+            </adminhtml_postnlAdminhtml_shipment_convertToPackage>
+
+            <adminhtml_postnlAdminhtml_shipment_changeProductCode translate="action" module="postnl">
+                <action>Change product code</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+                <skip_on_back>
+                    <adminhtml_sales_shipment_view/>
+                </skip_on_back>
+            </adminhtml_postnlAdminhtml_shipment_changeProductCode>
+
+            <adminhtml_postnlAdminhtml_shipment_changeParcelCount translate="action" module="postnl">
+                <action>Change parcel count</action>
+                <expected_models>
+                    <postnl_core__shipment/>
+                </expected_models>
+                <skip_on_back>
+                    <adminhtml_sales_shipment_view/>
+                </skip_on_back>
+            </adminhtml_postnlAdminhtml_shipment_changeParcelCount>
+
+            <adminhtml_postnlAdminhtml_shipment_massCreateShipments translate="action" module="postnl">
+                <action>Create shipments</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchSaveMassAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_shipment_massCreateShipments>
+
+            <adminhtml_postnlAdminhtml_shipment_massFullPostnlFlow translate="action" module="postnl">
+                <action>Create shipments, print labels and confirm shipment</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchSaveMassAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_shipment_massFullPostnlFlow>
+
+            <adminhtml_postnlAdminhtml_shipment_massFullPostnlFlowWithPackingSlip translate="action" module="postnl">
+                <action>Create shipments, print packing slips and confirm shipment</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchSaveMassAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_shipment_massFullPostnlFlowWithPackingSlip>
+
+            <adminhtml_postnlAdminhtml_shipment_massPrintLabelsAndConfirm translate="action" module="postnl">
+                <action>Print labels and confirm shipment</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchSaveMassAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_shipment_massPrintLabelsAndConfirm>
+
+            <adminhtml_postnlAdminhtml_shipment_massPrintPackingSlipsAndConfirm translate="action" module="postnl">
+                <action>Print packing slips and confirm shipment</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchSaveMassAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_shipment_massPrintPackingSlipsAndConfirm>
+
+            <adminhtml_postnlAdminhtml_shipment_massPrintLabels translate="action" module="postnl">
+                <action>Print labels</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchSaveMassAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_shipment_massPrintLabels>
+
+            <adminhtml_postnlAdminhtml_shipment_massPrintPackingslips translate="action" module="postnl">
+                <action>Print packing slips</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchSaveMassAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_shipment_massPrintPackingslips>
+
+            <adminhtml_postnlAdminhtml_shipment_massConfirm translate="action" module="postnl">
+                <action>Confirm shipments</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchSaveMassAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_shipment_massConfirm>
+
+            <adminhtml_postnlAdminhtml_shipment_massCreateParcelwareExport translate="action" module="postnl">
+                <action>Create Parcelware export</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchSaveMassAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_shipment_massCreateParcelwareExport>
+
+            <adminhtml_postnlAdminhtml_shipment_massUpdateShippingStatus translate="action" module="postnl">
+                <action>Update shipping statusses</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchSaveMassAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_shipment_massUpdateShippingStatus>
+
+            <adminhtml_postnlAdminhtml_config_validateAccount translate="action" module="postnl">
+                <action>Validate account settings</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_config_validateAccount>
+
+            <adminhtml_postnlAdminhtml_config_exportTablerates translate="action" module="postnl">
+                <action>Export table rates</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_config_exportTablerates>
+
+            <adminhtml_postnlAdminhtml_config_exportMatrixrates translate="action" module="postnl">
+                <action>Export matrix rates</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_config_exportMatrixrates>
+
+            <adminhtml_postnlAdminhtml_config_downloadLogs translate="action" module="postnl">
+                <action>Download logs</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchAction</post_dispatch>
+            </adminhtml_postnlAdminhtml_config_downloadLogs>
+
+            <adminhtml_postnlAdminhtml_extensionControl_activate translate="action" module="postnl">
+                <action>Activate</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchAction</post_dispatch>
+                <skip_on_back>
+                    <adminhtml_system_config_edit/>
+                </skip_on_back>
+            </adminhtml_postnlAdminhtml_extensionControl_activate>
+
+            <adminhtml_postnlAdminhtml_extensionControl_showActivationFields translate="action" module="postnl">
+                <action>Reset activation</action>
+                <post_dispatch>postnl__admin_logging_handler_postnl::postDispatchAction</post_dispatch>
+                <skip_on_back>
+                    <adminhtml_system_config_edit/>
+                </skip_on_back>
+            </adminhtml_postnlAdminhtml_extensionControl_showActivationFields>
+        </actions>
+    </postnl_shipment>
+</logging>
